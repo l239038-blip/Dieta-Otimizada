@@ -35,6 +35,8 @@ function calcular_constantes(arquivo)
         error("objetivo inválido")
     end
 
+    #C_max = C_max + 10000
+
     # Proteínas (g/kg)
     P_fator_min, P_fator_max = if nivel_exercicio == "S"
         (0.8, 1.0)
@@ -65,6 +67,7 @@ function calcular_constantes(arquivo)
 
     # Gorduras calculadas pelas calorias restantes
     G_min = (C_min - kcal_PC_max) / 9
+    #G_max = 10000
     G_max = (C_max - kcal_PC_min) / 9
 
     # Evita valores negativos
