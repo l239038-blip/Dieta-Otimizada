@@ -3,14 +3,14 @@ using HiGHS
 
 include("constant_calculator.jl")
 include("variable_reader.jl")
+include("variables.jl")
 
 function main()
         
-    arquivo1 = joinpath(@__DIR__, "person1.txt")
-    arquivo2 = joinpath(@__DIR__, "data.csv")
+    arquivo1 = joinpath(@__DIR__, "..", "data", "person1.txt")
+    arquivo2 = joinpath(@__DIR__, "..", "data", "data.csv")
     
-    C_min, C_max, P_min, P_max, G_min, G_max, Carb_min, Carb_max, preferencias, orcamento =
-    calcular_constantes(arquivo1)
+    C_min, C_max, P_min, P_max, G_min, G_max, Carb_min, Carb_max, preferencias, orcamento = calcular_constantes(arquivo1)
 
     println()
     println("Calorias     : $C_min - $C_max kcal")
@@ -20,28 +20,6 @@ function main()
     println("Orçamento    : R\$ $(round(orcamento, digits=2))")
     println("Preferências : $(length(preferencias)) itens")
     alimentos = ler_alimentos(arquivo2)
-
-    REFEICOES = ["Cafe da Manha","Almoco","Janta"]
-
-    MIN_ALIMENTOS = 3
-    MAX_ALIMENTOS = 5
-    MAX_UNIDADES = 3
-    MAX_PROTEINAS = 2
-    MAX_CARBO = 3
-    MAX_GORDURA = 3
-
-    dependencias = [
-        ("Bacon","Ovo")
-        ("Arroz Cosido","Carne Vermelha")
-        ("Macarrao","Frango Grelhado")
-        
-    ]
-
-    mutuamente_exclusivos = [
-        ("Pao","Tapioca")
-        ("Arroz Cozido","Macarrao")
-        ("Batata Cozida","Batata Frita")
-    ]
 
     n = length(alimentos)
 
