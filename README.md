@@ -12,6 +12,10 @@
 * [Equipe](#Equipe)
 
 ## 1. Descrição do Projeto 
+Este projeto trabalha a criação de dietas personalizadas usando técnicas de otimização inteira. 
+
+
+
 ## 2. Objetivos
 ## 3. Coleta de Dados
 ## 4. Input do Programa
