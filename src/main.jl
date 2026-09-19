@@ -1,12 +1,12 @@
-
 using JuMP
 using HiGHS
+
 include("constant_calculator.jl")
 include("variable_reader.jl")
 
 function main()
         
-    arquivo1 = joinpath(@__DIR__, "test.txt")
+    arquivo1 = joinpath(@__DIR__, "person1.txt")
     arquivo2 = joinpath(@__DIR__, "data.csv")
     
     C_min, C_max, P_min, P_max, G_min, G_max, Carb_min, Carb_max, preferencias, orcamento =
@@ -25,7 +25,7 @@ function main()
 
     MIN_ALIMENTOS = 3
     MAX_ALIMENTOS = 5
-    MAX_UNIDADES = 4
+    MAX_UNIDADES = 3
     MAX_PROTEINAS = 2
     MAX_CARBO = 3
     MAX_GORDURA = 3
