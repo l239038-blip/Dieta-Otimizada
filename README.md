@@ -67,19 +67,19 @@ $$
 q_{it} \geq 0
 $$
 
-onde q_{it}  representa a quantidade, em gramas, do alimento \(i\) consumida na refeição \(t\).
+onde $q_{it}$ representa a quantidade, em gramas, do alimento $i$ consumida na refeição $t$.
 
 **Conjuntos**
 
-- \(I\): conjunto dos alimentos disponíveis;
-- \(T\): conjunto das refeições disponíveis.
+- $I$ conjunto dos alimentos disponíveis;
+- $T$: conjunto das refeições disponíveis.
 
 ### **Função Objetivo** 
 
 A função objetivo é definida de modo a priorizar as preferências do usuário: 
-$$
-\sum_{i \in I} w_i y_{it}
-$$
+
+$$\sum_{i \in I} w_i y_{it}$$
+
 sujeita as seguintes restrições: 
 
 #### Restrição Calórica
@@ -88,8 +88,8 @@ $$
 Cal_{min} \leq \sum_{t} \sum_{i} k_i q_{it} \leq Cal_{max}
 $$
 
-*   \(Cal_{min}\) e \(Cal_{max}\): ingestão calórica mínima e máxima diária;
-*   \(k_i\): quantidade de calorias por grama do alimento \(i\).
+*   $Cal_{min}$ e $Cal_{max}$: ingestão calórica mínima e máxima diária;
+*   $k_i$: quantidade de calorias por grama do alimento $i$.
 
 #### Restrição Proteíca
 
@@ -98,7 +98,7 @@ P_{min} \leq \sum_{t} \sum_{i} p_i q_{it} \leq P_{max}
 $$
 
 *   \(P_{min}\) e \(P_{max}\): ingestão mínima e máxima de proteínas;
-*   \(p_i\): quantidade de proteínas por grama do alimento \(i\).
+*   \(p_i\): quantidade de proteínas por grama do alimento $i$.
 *   
 #### Restrição Glicídica
 $$
@@ -106,7 +106,7 @@ C_{min} \leq \sum_{t} \sum_{i} c_i q_{it} \leq C_{max}
 $$
 
 *   \(C_{min}\) e \(C_{max}\): ingestão mínima e máxima de carboidratos;
-*   \(c_i\): quantidade de carboidratos por grama do alimento \(i\).
+*   \(c_i\): quantidade de carboidratos por grama do alimento $i$.
   
 #### Restrição Hipogordurosa
 $$
@@ -114,7 +114,7 @@ G_{min} \leq \sum_{t} \sum_{i} g_i q_{it} \leq G_{max}
 $$
 
 *   \(G_{min}\) e \(G_{max}\): ingestão mínima e máxima de gorduras;
-*   \(g_i\): quantidade de gorduras por grama do alimento \(i\).
+*   \(g_i\): quantidade de gorduras por grama do alimento $i$.
   
 #### Restrição Orçamentária
 Também foi adicionada uma restrição para respeitar o orçamento fornecido pelo usuário:
@@ -123,8 +123,8 @@ $$
 \sum_{t} \sum_{i} v_i q_{it} \leq B
 $$
 
-*   \(v_i\): custo por grama do alimento \(i\);
-*   \(B\): orçamento disponível para a dieta.
+*   $v_i$ custo por grama do alimento $i$;
+*   $B$: orçamento disponível para a dieta.
 
 #### Restrição de Seleção 
 
