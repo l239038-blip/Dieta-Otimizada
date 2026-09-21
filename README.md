@@ -4,7 +4,7 @@
 - [1. Descrição do Projeto](#1-Descrição-do-Projeto)
 - [2. Objetivos](#2-Objetivos)
 - [3. Input do Programa](#3-Input-do-Programa)
-- [4. Construção dados para problema de Otimização](#4.Construção-dados-para-problema-de-otimização)
+- [4. Construção dos Dados para problema de Otimização](#4.Construção-dados-para-problema-de-otimização)
 - [5. Definição Função Objetivo e Restrições](#4-Definição-Função-Objetivo-e-Restrições)
 - [6. Output do Programa](#5-Output-do-Programa)
 - [7. Técnicas e Tecnologias Utilizadas](#6-Técnicas-e-Tecnologias-Utilizadas)
@@ -45,7 +45,7 @@ Para construção do banco de dados o usuário deve fornecer os seguintes dados:
 A partir das opções citadas acima, o usuário fornece uma nota de 0 a 5 para cada alimento, expressando sua afinidade e preferência a cada opção. Cada nota fornecida recebe um peso diferente para valorização dos alimentos mais apreciados. 
 
 
-## 4. Construção dos dados para problema de otimização 
+## 4. Construção dos dados para problema de Otimização 
 
 
 ## 5. Definição Função Objetivo e Restrições
