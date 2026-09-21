@@ -11,7 +11,7 @@
 - [8. Equipe](#7-Equipe)
 
 ## 1. Descrição do Projeto 
-Este é um projeto acadêmico com a finalidade de estudo e aplicação de técnicas de **Programação Inteira**.
+Este é um projeto acadêmico com a finalidade de estudo e aplicação de técnicas de **Programação Linear Inteira Mista**.
 
 O foco central é o desenvolvimento de um programa capaz de, a partir dos dados orçamentários, das informações biológicas, das preferências alimentares e dos objetivos pessoais do usuário, construir uma dieta envolvendo café da manhã, almoço e jantar para um dia da tal forma que maximize as preferências do usuário ao mesmo tempo que atenda ao orçamento disponível e à taxa de macronutrientes necessários para respeitar as características fisiológicas desse usuário.
 
@@ -78,7 +78,7 @@ onde $q_{it}$ representa a quantidade, em gramas, do alimento $i$ consumida na r
 
 A função objetivo é definida de modo a priorizar as preferências do usuário: 
 
-$$\sum_{i \in I} w_i y_{it}$$
+$$ max \sum_{i \in I} w_i y_{it}   t= {1,2,3} $$
 
 sujeita as seguintes restrições: 
 
@@ -91,7 +91,7 @@ $$
 *   $Cal_{min}$ e $Cal_{max}$: ingestão calórica mínima e máxima diária;
 *   $k_i$: quantidade de calorias por grama do alimento $i$.
 
-#### Restrição Proteíca
+#### Restrição Proteica
 
 $$
 P_{min} \leq \sum_{t} \sum_{i} p_i q_{it} \leq P_{max}
@@ -108,7 +108,7 @@ $$
 *   \(C_{min}\) e \(C_{max}\): ingestão mínima e máxima de carboidratos;
 *   \(c_i\): quantidade de carboidratos por grama do alimento $i$.
   
-#### Restrição Hipogordurosa
+#### Restrição Lipídica
 $$
 G_{min} \leq \sum_{t} \sum_{i} g_i q_{it} \leq G_{max}
 $$
@@ -134,15 +134,15 @@ $$
 
 #### Restrição de Coerência Alimentar 
 $$
-y_{bacon} \leq y_{ovo}
+y_{bacon,j} \leq y_{ovo,j}
 $$
 
 $$
-y_{pão} + y_{tapioca} \leq 1
+y_{pão,j} + y_{tapioca,j} \leq 1
 $$
 
 $$
-y_{batata} + y_{batata\ frita} \leq 1
+y_{batata,j} + y_{batata\ frita,j} \leq 1
 $$
 
 ## 6. Output do Programa
@@ -151,8 +151,8 @@ Como saída do programa é fornecido uma tabela com os alimentos que devem ser c
 
 ## 7. Técnicas e Tecnologias Utilizadas
 - ``Julia``
-- ``HIGHS``
-- ``JUMP``
+- ``HiGHS``
+- ``JuMP``
 - ``Overleaf``
 ## 8. Equipe
 Este projeto foi desenvolvido por:
